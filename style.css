@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --light-gray: hsl(0, 3%, 88%);
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+ .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-cyan);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 35vh, left 50vw top 45vh;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+ }
+
+.container-items {
+    z-index: 2;
+    width: 330px;
+    height: 360px;
+    display: grid;
+    border-radius: 15px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    grid-template-rows: min-content;
+    background-color: var(--white);
+    background-image: url(images/bg-pattern-card.svg);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container-img {
+    margin-top: 85px;
+    border-radius: 50%;
+    justify-self: center;
+    border: 6px solid var(--white);
+}
+
+.container-texts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.container-texts p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+
+.container-texts p strong {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 6px;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.container-texts p:last-child{
+    font-size: 15px;
+    margin-top: 8px;
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+
+.container-numbers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.number p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--dark-gray)
+}
+
+.number p:first-child {
+    font-size: 18px;
+    margin-top: 25px;
+    font-weight: 700;
+    letter-spacing: unset;
+    color: var(--very-dark-desaturated-blue);
+}
+
+@media (max-width: 500px) {
+    .container {
+        background-position: right 50vw bottom 25vh, left 50vw top 40vh;
+    }
+}
